@@ -1,6 +1,10 @@
 version: "3.4"
 services:
   minepy:
-    image: minepy
+    image: minepy:latest
     build: 
       context: .
+    volumes:
+      - $PWD:/minecraft
+    ports:
+      - "25565:25565"
